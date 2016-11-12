@@ -248,3 +248,6 @@ footer {
   bottom: 5px;
   right: 5px;
 }
+#panel {
+    position: center;
+}

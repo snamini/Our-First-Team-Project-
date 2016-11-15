@@ -1,10 +1,14 @@
+	var volunteer = "";
+	var volunteerLocation = "Santa Monica";
+	var volunteerDistance = "500";
+	var volunteerDate = "";
 
 
 $('#submitButton').on('click', function(){
-	var volunteer = $('#volunteerSearch').val().trim();
-	var volunteerLocation = $('#locationSearch').val().trim(); 
-	var volunteerDistance = $('#distanceSearch').val().trim();
-	var volunteerDate = $('#dateSearch').val().trim();
+	volunteer = $('#volunteerSearch').val().trim();
+	volunteerLocation = $('#locationSearch').val().trim(); 
+	volunteerDistance = $('#distanceSearch').val().trim();
+	volunteerDate = $('#dateSearch').val().trim();
   
 console.log("volunteerSearch = " + volunteer);
 console.log("volunteerLocation = " + volunteerLocation);

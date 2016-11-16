@@ -93,7 +93,7 @@
       // https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&keyword=cruise&key=YOUR_API_KEY
       var inputOne = "volunteer";
       var inputTwo = "Los Angeles";
-      var inputThree = "kids";
+      var inputThree = "";
       var map;
       var infowindow;
 
@@ -127,11 +127,11 @@
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-          location: santaMonica,
-          radius: 500,
-          keyword: inputOne
-        }, callback);
+        //service.nearbySearch({
+        //location: santaMonica,
+        ///radius: 500,
+        //keyword: inputOne
+        //}, callback);
 
         $("#search").click(function(){
           service.nearbySearch({

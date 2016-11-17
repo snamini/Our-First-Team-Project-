@@ -1273,7 +1273,9 @@ h2,
 h3,
 .h3 {
   font-size: 24px;
+    color: aliceblue;
 }
+
 h4,
 .h4 {
   font-size: 18px;
@@ -6754,4 +6756,12 @@ button.close {
     display: none !important;
   }
 }
+
+/*
+#form {
+     margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+*/
 /*# sourceMappingURL=bootstrap.css.map */

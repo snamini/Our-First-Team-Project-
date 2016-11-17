@@ -1,33 +1,83 @@
-	
+$(document).ready(function() {
 
-var volunteer = "";
-	var volunteerLocation = "Santa Monica";
-	var volunteerDistance = "500";
-	var volunteerDate = "";
+    console.log("ready");
+    
+    var volunteer = "";
+        var volunteerLocation = "Santa Monica";
+        var volunteerDistance = "500";
+        var volunteerDate = "";
 
 
-$('#submitButton').on('click', function(){
-	volunteer = $('#volunteerSearch').val().trim();
-	volunteerLocation = $('#locationSearch').val().trim(); 
-	volunteerDistance = $('#distanceSearch').val().trim();
-	volunteerDate = $('#dateSearch').val().trim();
-  
-    console.log("volunteerSearch = " + volunteer);
-    console.log("volunteerLocation = " + volunteerLocation);
-    console.log("volunteerDistance = " + volunteerDistance);
-    console.log("volunteerDate = " + volunteerDate);
+    $('#submitButton').on('click', function(){
+        volunteer = $('#volunteerSearch').val().trim();
+        volunteerLocation = $('#locationSearch').val().trim(); 
+        volunteerDistance = $('#distanceSearch').val().trim();
 
-return false;
+        console.log("volunteer Search " + volunteer);
+        console.log("volunteer Location = " + volunteerLocation);
+        console.log("volunteer Distance = " + volunteerDistance);
+        
+            $('#volunteerSearch').val("");
+            $('#locationSearch').val("");
+            $('#distanceSearch').val("");
+
+    return false;
+//        
+     
+    });
+    
+    
 });
+
 
 
 //$.post("index.html", function(data, status){
 //    alert("Data: " + data + "\nStatus: " + status);
 //});
 
+//------APPLICATION FORM------
+
 function validateForm() {
     var firstName = document.getElementById('data_12').value.trim();
     console.log(firstName);
+    
+      var lastName = document.getElementById('data_13').value.trim();
+    console.log(lastName);
+    
+      var email = document.getElementById('data_11').value.trim();
+    console.log(email);
+    
+      var phone = document.getElementById('data_4').value.trim();
+    console.log(phone);
+    
+    
+    var comment = document.getElementById('data_9').value.trim();
+    console.log(comment);
+    
+//    check boxes
+    
+//    var firstName = document.getElementById('data_8_0').val();
+//    console.log(firstName);
+//    
+//    var firstName = document.getElementById('data_8_1').val();
+//    console.log(firstName);
+//    
+//      var firstName = document.getElementById('data_8_2').val();
+//    console.log(firstName);
+//    
+//    var firstName = document.getElementById('data_8_3').val();
+//    console.log(firstName);
+//    
+//        var firstName = document.getElementById('data_8_4').val();
+//    console.log(firstName);
+//    
+//        var firstName = document.getElementById('data_8_5').val();
+//    console.log(firstName);
+//    
+//        var firstName = document.getElementById('data_10_0').val();
+//    console.log(firstName);
+    
+    
     
     if (isEmpty(document.getElementById('data_12').value.trim())) {
         console.log(document.getElementById('data_12').value.trim())
@@ -42,6 +92,25 @@ function validateForm() {
         alert('Email must be a valid email address!');
         return false;
     }
+    
+    $('#data_12').val("");
+    $('#data_12').val("");
+    $('#data_13').val("");
+    $('#data_11').val("");
+    $('#data_4').val("");
+    $('#data_9').val("");
+    
+    
+//    clearing check boxes
+//    $('#data_8_0').val("");
+//    $('#data_8_1').val("");
+//    $('#data_8_2').val("");
+//    $('#data_8_3').val("");
+//    $('#data_8_4').val("");
+//    $('#data_8_5').val("");
+//    
+//    $('#data_10_0').val("");
+    
     return false;
 }
     
@@ -116,7 +185,7 @@ return isEmpty(email) || re.test(email);
     $('.map').on('click', onMapClickHandler);
 
 
-var inputOne = "volunteer" + " " + volunteerLocation + " " + volunteer;
+    var inputOne = "volunteer" + " " + volunteerLocation + " " + volunteer;
       // var inputTwo = "Los Angeles";
       // var inputThree = "kids";
       // var inputTwo = volunteerLocation;

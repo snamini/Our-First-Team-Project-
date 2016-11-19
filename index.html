@@ -30,18 +30,30 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="js/javascript.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4rMpKpDB7hi9E8aUMpYq6pHxsQ3rYNM4&libraries=places&callback=initMap" async defer></script>
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
 
 <body>
+    
 
     <!-- Header -->
+    
+    <div id="bgndVideo_home" data-property="{videoURL:'https://youtu.be/rkruelAnVCg', opacity:1, autoPlay:true, containment:'body', startAt:1, stopAt:0, mute:true, vol:50, optimizeDisplay:true, showControls:false, printUrl:false, loop:true, addRaster:false, quality:'highres', ratio:'auto', realfullscreen:'true', gaTrack:'true', stopMovieOnBlur:'false'}" class="mb_YTPlayer isMuted" style="display: none; position: relative; background-image: none;"></div>
+    
+    
+    
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>HELPING HANDS UNITE</h1>
             <h3>Saving the world one project at a time!</h3>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a><br/>
+            <h3 id="quote" class="randomQuote"></h3>
+            <!-- <a href="#about" class="btn btn-dark btn-lg">Find Out More</a><br/> -->
+
         </div>
     </header>
 
@@ -60,6 +72,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
+
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -87,7 +100,9 @@
     </nav>
 
 
+                    <h2>Find it | Fill it | Send it!</h2>
 
+    </section>
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -107,8 +122,10 @@
                                 <h4>
                                     <strong>Clean Ups</strong>
                                 </h4>
+<!--
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                
+-->
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -120,8 +137,10 @@
                                 <h4>
                                     <strong>Donations</strong>
                                 </h4>
+<!--
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
+-->
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -133,8 +152,10 @@
                                 <h4>
                                     <strong>Animal Shelters</strong>
                                 </h4>
+<!--
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
+-->
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -146,8 +167,10 @@
                                 <h4>
                                     <strong>Children's Aid</strong>
                                 </h4>
+<!--
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
+-->
                             </div>
                         </div>
                     </div>
@@ -159,8 +182,11 @@
         </div>
         <!-- /.container -->
     </section>
-
-
+<!-- Callout -->
+<!--     <aside class="callout">
+            <h1>Participate</h1>
+        </div>
+    </aside> -->
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
@@ -215,16 +241,13 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
+                    </div> <!--row-->
             </div>
             <!-- /.row -->
-        </div>
-        <!-- /.container -->
     </section>
+
+        <!-- /.container -->
+    
 
 
 <!---/FORM -->
@@ -237,7 +260,7 @@
                     <h3 class="panel-title">Volunteer Search</h3>
                 </div>
                 <div class="panel-body">
-                    <form>
+                    <form id=>
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <label for="volunteerSearch">Volunteer Search</label>
@@ -256,23 +279,20 @@
                                 <input type="text" class="form-control" id="distanceSearch">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <label for="dateSearch">Dates</label>
-                                <input type="text" class="form-control" id="dateSearch">
-                            </div>
-                        </div>
                             <div class="form-group col-xs-2">
                                 <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
                                 <br/>
                             </div>
-                        </div>  
                     </form>
-                </div>
+                </div>  
             </div>
-        </div>
-         <div class="col-md-2">  </div></div>
+        </div><div class="col-md-2">  </div></div>
     </div>
+   
+    <div class="col-md-2">  </div>
+
+<div class="textinput">
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
 </div>
      <!-- Map  -->
 
@@ -439,8 +459,63 @@
         </small>
         </iframe>
     </section> -->
+    <!-- <div id="map"></div> -->
+    
+  
+<!--MAP-->
+ <!-- <section id="contact" class="map"> -->
+<!--     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <br />
+    <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+     </small>
+</section>  -->
 
-    <!-- Footer -->
+<!-- Include this in the action="MAILTO:[email address]" -->
+<!--APPLICATION FORM-->
+                
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form  id ="form" method="post" action="javascript:validateForm();" onSubmit="return validateForm();">
+            <div style="width: 400px;">
+            </div>
+            <div style="padding-bottom: 18px;font-size : 21px;">Volunteer Registration</div>
+            <div style="display: flex; padding-bottom: 18px;width : 450px;">
+            <div style=" margin-left : 0; margin-right : 1%; width : 49%;">First name<span style="color: red;"> *</span><br/>
+            <input type="text" id="data_12" name="data_12" style="width: 100%;" class="form-control"/>
+            </div>
+            <div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<span style="color: red;"> *</span><br/>
+            <input type="text" id="data_13" name="data_13" style="width: 100%;" class="form-control"/>
+            </div>
+            </div><div style="padding-bottom: 18px;">Email<br/>
+            <input type="text" id="data_11" name="data_11" style="width : 450px;" class="form-control"/>
+            </div>
+            <div style="padding-bottom: 18px;">Phone<br/>
+            <input type="text" id="data_4" name="data_4" style="width : 250px;" class="form-control"/>
+            </div>
+            <div style="padding-bottom: 18px;">What can you help with?<br/>
+            <span><input type="checkbox" id="data_8_0" name="data_8" value="Delivering Flyers"/> Delivering Flyers</span><br/>
+            <span><input type="checkbox" id="data_8_1" name="data_8" value="Taking Phone Calls"/> Taking Phone Calls</span><br/>
+            <span><input type="checkbox" id="data_8_2" name="data_8" value="Entering Data"/> Entering Data</span><br/>
+            <span><input type="checkbox" id="data_8_3" name="data_8" value="Public Relations"/> Public Relations</span><br/>
+            <span><input type="checkbox" id="data_8_4" name="data_8" value="Door-to-Door"/> Door-to-Door</span><br/>
+            <span><input type="checkbox" id="data_8_5" name="data_8" value="Clerical Work"/> Clerical Work</span><br/>
+            </div>
+            <div style="padding-bottom: 18px;">Why do you want to join our campaign?<br/>
+            <textarea id="data_9" ${readonly} name="data_9" style="width : 450px;" rows="6" class="form-control"></textarea>
+            </div>
+            <div style="padding-bottom: 18px;"><br/>
+            <span><input type="checkbox" id="data_10_0" name="data_10" value="Sign me up to supporter email list"/> Sign me up to supporter email list</span><br/>
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+    <!--    <input type="submit" value="Submit"/>-->
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+    
+    
+
     <footer>
         <div class="container">
             <div class="row">
